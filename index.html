@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérifier le mots de passe</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Vérifier un mot de passe</h1>
+        <form action="">
+            <label for="">Utilisateur</label>
+            <input type="text" required>
+
+            <label for="Mots de passe">Mots de passe</label>
+            <input type="password" id="password" required>
+            <div class="password-icon">
+                <button class="voirmdp"><img src="./assets/img/view.png" alt="Icône d'un oeil"></button>
+                <button class="cachermdp"><img src="./assets/img/hide.png" alt="Icône d'un oeil barré"></button>
+                <!-- <i class="feather-eye" data-feather="eye"></i> -->
+                <!-- <i class="feather-eye-off" data-feather="eye-off"></i> -->
+            </div>
+
+            <input class="buttons" type="submit" value="Envoyer">
+        </form>
+
+        <div id="message">
+            <h2>Le mots de passe doit comporter :</h2>
+            <ul>
+                <li id="letter" class="invalid">Une lettre minuscule</li>
+                <li id="capital" class="invalid">Une lettre majuscule</li>
+                <li id="number" class="invalid">Un chiffre</li>
+                <li id="length" class="invalid">8 caractères minimum</li>
+            </ul>
+        </div>
+
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

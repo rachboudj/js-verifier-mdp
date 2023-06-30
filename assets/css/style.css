@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--beige);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+}
+
+li {
+    list-style-type: none;
+    font-family: var(--font);
+}
+
+h1 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--font);
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    --bleu : #2244FE;
+    --beige : #FFF9F0;
+    --blanc : #FFFFFF;
+    --gris : #d7d6d6;
+    --noirgris : #333233;
+    --rouge: #f86161;
+    --vert: #36b700;
+    --font: 'Space Mono', monospace;
+}
+
+main {
+    margin: 4em 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+label {
+    margin-top: 3em;
+    font-family: var(--font);
+    font-size: 1em;
+    text-decoration: underline;
+    margin-bottom: 1.4em;
+    position: relative;
+    transition: all 0.2s;
+}
+
+input {
+    /* margin-top: 1em; */
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid var(--noirgris);
+    background-color: transparent;
+    padding-bottom: 1em;
+    font-family: var(--font);
+    font-size: 0.8em;
+}
+
+input:focus {
+    border-bottom: 2px solid var(--bleu);
+}
+
+.voirmdp {
+    border: none;
+    background-color: transparent;
+}
+
+.voirmdp img {
+    width: 30px;
+}
+
+.cachermdp {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+.cachermdp img {
+    width: 30px;
+}
+
+.password-icon {
+    margin-top: 1em;
+}
+
+.password-icon .feather-eye-off {
+    display: none;
+}
+
+.buttons {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 1px solid var(--bleu);
+    padding: 15px 10px;
+    width: 100%;
+    background-color: var(--bleu);
+    color: var(--blanc);
+    margin-top: 4em;
+    cursor: pointer;
+}
+
+#message {
+    display: none;
+    margin-top: 3em;
+}
+
+#message ul {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#message .invalid {
+    color: var(--rouge);
+}
+
+#message .invalid:before {
+    position: relative;
+    content: "x";
+    left: -6px;
+}
+
+#message .valid {
+    color: var(--vert);
+}
+
+#message .valid:before {
+    position: relative;
+    content: "✓";
+    left: -6px;
+}
